@@ -22,7 +22,7 @@ title: SecureLee
 email: ben@aircooledcafe.com
 description: >- # this means to ignore newlines until "baseurl:"
   My thoughts and findings on my journey into the cyber security profession.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/securelee" # the subpath of your site, e.g. /blog
 url: "aircooledcafe.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aircooledcafe
 github_username:  aircooledcafe
