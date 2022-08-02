@@ -19,7 +19,7 @@ Next up is to get antigen:
 
 Then we need to create our zshrc file and add a couple of lines to enable antigen:  
 
-'vim .zshrc'  
+`vim .zshrc`  
 
 And add the following lines:  
 
@@ -28,7 +28,7 @@ antigen init ~/.antigenrc`
 
 Now we need to create our antigenrc file and configure our plugins:  
 
-`vi .antigenrc`
+`vim .antigenrc`
 
 Add the following lines:
 
