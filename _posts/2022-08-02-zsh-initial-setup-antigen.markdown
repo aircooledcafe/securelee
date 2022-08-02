@@ -62,7 +62,7 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 {% endhighlight %}
 
-Configure powerlevel10k, if it doesn't automatically start:  
+Configure powerlevel10k:  
 
 `p10k configure`
 
@@ -72,13 +72,16 @@ Change the default shell to zsh:
 
 Relaod shell for changes to take effect.
 
-Here are links to MesloLGS, one of my prefered fonts:
+Here are links to MesloLGS, one of my prefered fonts and the default powerline fault used by powerlevel10k, ideal for manual installation if your not on Ubuntu or Debian:  
+[MesloLGS Regular][mesloregular]  
+[MesloLGS Bold][meslobold]   
+[MesloLGS Italic][mesloitalic]  
+[MesloLGS Bold Italic][meslobolditalic]  
 
-https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
-https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
-https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
-https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-
+[mesloregular]: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+[meslobold]: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+[mesloitalic]: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+[meslobolditalic]: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 [powerlevel10k]: https://github.com/romkatv/powerlevel10k
 [antigen]: https://github.com/zsh-users/antigen
 [romkatv]: https://github.com/romkatv
