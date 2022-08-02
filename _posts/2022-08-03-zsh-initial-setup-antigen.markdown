@@ -1,0 +1,86 @@
+---
+layout: post
+title: Setting up ZSH on linux with antigen
+date: 2022-08-03 09:00 +0100
+categories: linux zsh antigen 
+---
+
+Here is my setup for my shell in linux, I use [antigen][antigen] to manage plugins and [Powerlevel10k][powerlevel10k] them by [Roman Perepelitsa][romkatv]. All commands assume you are in your home directory.  
+
+First things first is to install some dependencies:  
+
+`sudo apt install zsh git curl autojump fonts-powerline wget`  
+
+(If your not on Ubuntu or Debian, you can follow instructions [here][powerline] for powerline fonts.)  
+
+Next up is to get antigen:  
+
+`curl -L git.io/antigen > antigen.zsh`  
+
+Then we need to create our zshrc file and add a couple of lines to enable antigen:  
+
+'vim .zshrc'  
+
+And add the following lines:  
+
+source /home/vm1/antigen.zsh  
+antigen init ~/.antigenrc  
+
+$ vi .antigenrc
+# add the following lines
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle docker
+# use the j autojump directory function
+antigen bundle autojump
+
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+# double esc to add sudo
+antigen bundle hcgraf/zsh-sudo
+# colored man pages
+antigen bundle ael-code/zsh-colored-man-pages
+
+# Load the theme.
+antigen theme romkatv/powerlevel10k
+
+# Tell Antigen that you're done.
+antigen apply
+
+# configure powerlevel10k
+# install fonts
+
+https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+
+
+# change shell
+chsh -s /usr/bin/zsh (or path to zsh if not this)
+logout for changes to take effect
+
+
+
+# ultime vim configuration
+https://github.com/amix/vimrc
+
+git clone https://github.com/amix/vimrc ~/.vim_runtime
+
+ - request
+
+
+[powerlevel10k]: https://github.com/romkatv/powerlevel10k
+[antigen]: https://github.com/zsh-users/antigen
+[romkatv]: https://github.com/romkatv
+[powerline]: https://github.com/powerline/fonts
