@@ -23,18 +23,22 @@ Then we need to create our zshrc file and add a couple of lines to enable antige
 
 And add the following lines:  
 
-`source /home/vm1/antigen.zsh  
+`source /home/vm1/antigen.zsh   
 antigen init ~/.antigenrc`  
 
-$ vi .antigenrc
-# add the following lines
+Now we need to create our antigenrc file and configure our plugins:  
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+`vi .antigenrc`
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle pip
+Add the following lines:
+
+{% highlight conf %}
+# Load the oh-my-zsh's library.  
+antigen use oh-my-zsh  
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).   
+antigen bundle git  
+antigen bundle pip  
 antigen bundle lein
 antigen bundle command-not-found
 antigen bundle docker
@@ -56,6 +60,7 @@ antigen theme romkatv/powerlevel10k
 
 # Tell Antigen that you're done.
 antigen apply
+{% endhighlight %}
 
 # configure powerlevel10k
 # install fonts
