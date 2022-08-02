@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up ZSH on linux with antigen
-date: 2022-08-03 09:00 +0100
+date: 2022-08-02 20:00 +0100
 tags: linux zsh antigen 
 ---
 
@@ -23,8 +23,8 @@ Then we need to create our zshrc file and add a couple of lines to enable antige
 
 And add the following lines:  
 
-source /home/vm1/antigen.zsh  
-antigen init ~/.antigenrc  
+`source /home/vm1/antigen.zsh  
+antigen init ~/.antigenrc`  
 
 $ vi .antigenrc
 # add the following lines
