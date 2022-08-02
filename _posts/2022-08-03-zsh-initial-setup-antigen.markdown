@@ -2,7 +2,7 @@
 layout: post
 title: Setting up ZSH on linux with antigen
 date: 2022-08-03 09:00 +0100
-categories: linux zsh antigen 
+tags: linux zsh antigen 
 ---
 
 Here is my setup for my shell in linux, I use [antigen][antigen] to manage plugins and [Powerlevel10k][powerlevel10k] them by [Roman Perepelitsa][romkatv]. All commands assume you are in your home directory.  

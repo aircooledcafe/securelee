@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker volume location in WSL2"
 date:   2022-08-02 14:07:31 +0100
-categories: docker wsl2 volumes
+tags: docker wsl2 volumes
 ---
 
 The location where Docker stores the data for volumes created when using it in WSL2 mode:

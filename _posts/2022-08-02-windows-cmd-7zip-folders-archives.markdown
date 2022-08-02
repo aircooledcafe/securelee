@@ -2,7 +2,7 @@
 layout: post
 title:  "Using CMD to create individual archives of multiple folders."
 date:   2022-08-02 14:14 +0100
-categories: windows CMD 7zip command line
+tags: windows CMD 7zip command line
 ---
 
 
