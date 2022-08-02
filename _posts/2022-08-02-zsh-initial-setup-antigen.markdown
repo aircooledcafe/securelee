@@ -62,28 +62,22 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 {% endhighlight %}
 
-# configure powerlevel10k
-# install fonts
+Configure powerlevel10k, if it doesn't automatically start:  
+
+`p10k configure`
+
+Change the default shell to zsh:  
+
+`chsh -s /usr/bin/zsh`   
+
+Relaod shell for changes to take effect.
+
+Here are links to MesloLGS, one of my prefered fonts:
 
 https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
 https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
-
-
-# change shell
-chsh -s /usr/bin/zsh (or path to zsh if not this)
-logout for changes to take effect
-
-
-
-# ultime vim configuration
-https://github.com/amix/vimrc
-
-git clone https://github.com/amix/vimrc ~/.vim_runtime
-
- - request
-
 
 [powerlevel10k]: https://github.com/romkatv/powerlevel10k
 [antigen]: https://github.com/zsh-users/antigen
