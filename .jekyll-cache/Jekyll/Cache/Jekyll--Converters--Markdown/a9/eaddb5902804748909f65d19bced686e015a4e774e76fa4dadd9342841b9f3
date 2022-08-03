@@ -1,6 +1,0 @@
-I"><p>The location where Docker stores the data for volumes created when using it in WSL2 mode:</p>
-
-<p><code class="language-plaintext highlighter-rouge">\\wsl.localhost\docker-desktop-data\data\docker\volumes</code></p>
-
-<p>This has moved several times over it’s lifetime so far and may move again in the future.</p>
-:ET
