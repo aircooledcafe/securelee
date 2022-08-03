@@ -30,12 +30,14 @@ url: "www.securelee.uk" # the base hostname & protocol for your site, e.g. http:
 # Build settings
 theme: minima
 
-twitter: aircooledcafe
-github: aircooledcafe
+twitter_username: aircooledcafe
+github_username: aircooledcafe
+
+show_excerpts: true
 
 plugins:
   - jekyll-feed
-  
+ 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
