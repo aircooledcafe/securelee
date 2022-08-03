@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/securelee/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/securelee/" rel="alternate" type="text/html" /><updated>2022-08-02T18:16:58+01:00</updated><id>http://localhost:4000/securelee/feed.xml</id><title type="html">SecureLee</title><subtitle>My thoughts and findings on my journey into the cyber security profession.</subtitle><entry><title type="html">Using CMD to create individual archives of multiple folders.</title><link href="http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives.html" rel="alternate" type="text/html" title="Using CMD to create individual archives of multiple folders." /><published>2022-08-02T14:14:00+01:00</published><updated>2022-08-02T14:14:00+01:00</updated><id>http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives</id><content type="html" xml:base="http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives.html">&lt;p&gt;Using the command line in Windows to create and individual zip archive of multiple folders.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/securelee/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/securelee/" rel="alternate" type="text/html" /><updated>2022-08-02T22:43:58+01:00</updated><id>http://localhost:4000/securelee/feed.xml</id><title type="html">SecureLee</title><subtitle>My thoughts and findings on my journey into the cyber security profession.</subtitle><entry><title type="html">Setting up ZSH on linux with antigen</title><link href="http://localhost:4000/securelee/2022/08/02/zsh-initial-setup-antigen.html" rel="alternate" type="text/html" title="Setting up ZSH on linux with antigen" /><published>2022-08-02T20:00:00+01:00</published><updated>2022-08-02T20:00:00+01:00</updated><id>http://localhost:4000/securelee/2022/08/02/zsh-initial-setup-antigen</id><content type="html" xml:base="http://localhost:4000/securelee/2022/08/02/zsh-initial-setup-antigen.html">&lt;p&gt;Here is my setup for my shell in linux, I use &lt;a href=&quot;https://github.com/zsh-users/antigen&quot;&gt;antigen&lt;/a&gt; to manage plugins and &lt;a href=&quot;https://github.com/romkatv/powerlevel10k&quot;&gt;Powerlevel10k&lt;/a&gt; them by &lt;a href=&quot;https://github.com/romkatv&quot;&gt;Roman Perepelitsa&lt;/a&gt;. All commands assume you are in your home directory.&lt;/p&gt;
+
+&lt;p&gt;First things first is to install some dependencies:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install zsh git curl autojump fonts-powerline wget&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(If your not on Ubuntu or Debian, you can follow instructions &lt;a href=&quot;https://github.com/powerline/fonts&quot;&gt;here&lt;/a&gt; for powerline fonts.)&lt;/p&gt;
+
+&lt;p&gt;Next up is to get antigen:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl -L git.io/antigen &amp;gt; antigen.zsh&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then we need to create our zshrc file and add a couple of lines to enable antigen:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim .zshrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And add the following lines:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source /home/vm1/antigen.zsh   
+antigen init ~/.antigenrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we need to create our antigenrc file and configure our plugins:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim .antigenrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the following lines:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-conf&quot; data-lang=&quot;conf&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Load the oh-my-zsh&apos;s library.  
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;my&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;  
+
+&lt;span class=&quot;c&quot;&gt;# Bundles from the default repo (robbyrussell&apos;s oh-my-zsh).   
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lein&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;not&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# use the j autojump directory function
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;autojump&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# Syntax highlighting bundle.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;syntax&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;highlighting&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;autosuggestions&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;completions&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# double esc to add sudo
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hcgraf&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# colored man pages
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ael&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;zsh&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;colored&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;man&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Load the theme.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theme&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;romkatv&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;powerlevel10k&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Tell Antigen that you&apos;re done.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;antigen&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Configure powerlevel10k:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p10k configure&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Change the default shell to zsh:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chsh -s /usr/bin/zsh&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Relaod shell for changes to take effect.&lt;/p&gt;
+
+&lt;p&gt;Here are links to MesloLGS, one of my prefered fonts and the default powerline fault used by powerlevel10k, ideal for manual installation if your not on Ubuntu or Debian:&lt;br /&gt;
+&lt;a href=&quot;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf&quot;&gt;MesloLGS Regular&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf&quot;&gt;MesloLGS Bold&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf&quot;&gt;MesloLGS Italic&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf&quot;&gt;MesloLGS Bold Italic&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="zsh" /><category term="antigen" /><summary type="html">Here is my setup for my shell in linux, I use antigen to manage plugins and Powerlevel10k them by Roman Perepelitsa. All commands assume you are in your home directory.</summary></entry><entry><title type="html">Using CMD to create individual archives of multiple folders.</title><link href="http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives.html" rel="alternate" type="text/html" title="Using CMD to create individual archives of multiple folders." /><published>2022-08-02T14:14:00+01:00</published><updated>2022-08-02T14:14:00+01:00</updated><id>http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives</id><content type="html" xml:base="http://localhost:4000/securelee/2022/08/02/windows-cmd-7zip-folders-archives.html">&lt;p&gt;Using the command line in Windows to create and individual zip archive of multiple folders.&lt;/p&gt;
 
 &lt;p&gt;Use case I have a directory with:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;folder1&lt;/code&gt;    &lt;br /&gt;
