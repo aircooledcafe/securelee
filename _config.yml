@@ -20,11 +20,9 @@
 
 title: SecureLee
 # name: Ben
-# email: ben@aircooledcafe.com
+email: ben@aircooledcafe.com
+author: Ben Lee
 
-author:
-  name: Ben Lee
-  email: ben@aircooledcafe.com
 description: > # this means to ignore newlines until "baseurl:"
   My thoughts and findings on my journey into the cyber security profession.
 baseurl: "" # the subpath of your site, e.g. /blog
