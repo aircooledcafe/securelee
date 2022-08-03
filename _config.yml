@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: SecureLee
-# name: Ben
 email: ben@aircooledcafe.com
 author: Ben Lee
 
@@ -31,10 +30,8 @@ url: "www.securelee.uk" # the base hostname & protocol for your site, e.g. http:
 # Build settings
 theme: minima
 
-minima:
-  social_links:
-    twitter: aircooledcafe
-    github: aircooledcafe
+twitter: aircooledcafe
+github: aircooledcafe
 
 plugins:
   - jekyll-feed
