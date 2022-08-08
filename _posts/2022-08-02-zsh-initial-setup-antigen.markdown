@@ -62,9 +62,9 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 {% endhighlight %}
 
-Configure powerlevel10k:  
+Start ZSH and the powerlevel10k configuration wizard should start:  
 
-`p10k configure`
+`zsh`
 
 Change the default shell to zsh:  
 
