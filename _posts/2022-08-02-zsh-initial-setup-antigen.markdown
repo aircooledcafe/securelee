@@ -70,7 +70,7 @@ Change the default shell to zsh:
 
 `chsh -s /usr/bin/zsh`   
 
-Relaod shell for changes to take effect.
+Log out and log back in for changes to take effect.
 
 Here are links to MesloLGS, one of my prefered fonts and the default powerline fault used by powerlevel10k, ideal for manual installation if your not on Ubuntu or Debian:  
 [MesloLGS Regular][mesloregular]  
