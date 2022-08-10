@@ -7,7 +7,7 @@ tags: windows CMD 7zip command line
 
 
 Using the command line in Windows to create and individual zip archive of multiple folders.
-
+<!--more-->  
 Use case I have a directory with:  
 `folder1`      
 `folder2`  
@@ -17,7 +17,7 @@ Which I want to make into:
 `folder1.zip`  
 `folder2.zip`  
 `folder3.zip`  
-<!--more-->  
+  
 You can use the following command, I am using 7zip replace with your archive tool of choice. This will create a zip in the root folder.
 
 `for /D %d in (.) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%d.zip" ".%d*"`

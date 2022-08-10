@@ -8,12 +8,12 @@ tags: linux zsh antigen
 Here is my setup for my shell in linux, I use [antigen][antigen] to manage plugins and [Powerlevel10k][powerlevel10k] them by [Roman Perepelitsa][romkatv]. All commands assume you are in your home directory.  
 
 First things first is to install some dependencies (some others that I always need installed too):  
-
+<!--more-->  
 `sudo apt install zsh git curl autojump fonts-powerline wget vim`  
 
 (If your not on Ubuntu or Debian, you can follow instructions [here][powerline] for powerline fonts.)  
 Remember to change your shell font ot a powerline one, I quite often use [MesloLGS][mesloregular] now instead of the bundled Powerline fonts noted. Microsoft also make a really nice powerline font now called Cascadia Code, available on [GitHub][cascadia].
-<!--more-->  
+  
 Next up is to download the antigen script and added it to a file:  
 
 `curl -L git.io/antigen > antigen.zsh`  

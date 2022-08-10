@@ -7,7 +7,7 @@ tags: windows 11 rightclick right click registry
 To enable the full right click context menu in Windows 11, hat tip to [PC Pro][pcpro] a paper magazine I still get occasionally.  
 Go to the registy key:  
 `HKEY_CURRENT_USER\SOFTWARE\CLASSES\CLSID`
-
+<!--more-->  
 Create a new ket called:  
 `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`  
 
