@@ -39,9 +39,9 @@ excerpt_separator: <!--more-->
 plugins:
   - jekyll-feed
 
-header_pages:
-  about.markdown
-  blog.markdown
+# header_pages:
+#   about.markdown
+#   blog.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
