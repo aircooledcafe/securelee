@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up ZSH on linux with antigen and powerlevel10k
-date: 2022-08-10 08:00
+date: 2022-07-28 08:00
 tags: linux zsh antigen 
 ---
 ![My Shell](assets/202208/shell_screencap.jpg/assets/202208/shell_screencap.jpg)  
