@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting up ZSH on linux with antigen
-date: 2022-08-02 20:00 +0100
+title: Setting up ZSH on linux with antigen and powerlevel10k
+date: 2022-08-10 08:00
 tags: linux zsh antigen 
 ---
 
