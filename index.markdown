@@ -5,4 +5,4 @@
 layout: home
 ---
 
-![Security through obscurity, dogy style](assets/hiding.jpg)
+![Security through obscurity, dogy style](assets/hiding_mid.jpg)

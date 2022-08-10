@@ -33,7 +33,7 @@ theme: minima
 twitter_username: aircooledcafe
 github_username: aircooledcafe
 
-show_excerpts: true
+show_excerpts: false
 excerpt_separator: <!--more-->
 
 plugins:
