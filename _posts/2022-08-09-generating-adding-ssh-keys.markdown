@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generating SSH Keys and Adding them to GitHub
+title: Generating and Adding SSH Keys
 date: 2022-08-10 11:40
 tags: github ssh keys security ed25519 linux
 ---
