@@ -40,8 +40,8 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  about.md
-  blog.md 
+  about.markdown
+  blog.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
