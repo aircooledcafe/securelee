@@ -4,7 +4,9 @@ title: Setting up ZSH on linux with antigen and powerlevel10k
 date: 2022-08-10 08:00
 tags: linux zsh antigen 
 ---
-
+![My Shell](assets/202208/shell_screencap.jpg/assets/202208/shell_screencap.jpg)  
+  
+  
 Here is my setup for my shell in linux, I use [antigen][antigen] to manage plugins and [Powerlevel10k][powerlevel10k] them by [Roman Perepelitsa][romkatv]. All commands assume you are in your home directory.  
 
 First things first is to install some dependencies (some others that I always need installed too):  
