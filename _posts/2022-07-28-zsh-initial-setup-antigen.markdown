@@ -24,7 +24,7 @@ Then we need to create our zshrc file and add our configuration to it:
 
 `vim .zshrc`  
 
-And add the following lines, the first two lines are for initiating antigen and pointing to ur antigen configuration file (this can be included within the .zshrc if you wish). The if statement is for pulling in my aliases from a file I add them too, this is of course optional.    
+And add the following lines, the first two lines are for initiating antigen and pointing to ur antigen configuration file (this can be included within the .zshrc if you wish). The if statement is for pulling in my aliases from a file I add them too, this is of course optional. 
 
 {% highlight conf %}
 source /home/vm1/antigen.zsh     
