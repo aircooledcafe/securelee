@@ -11,12 +11,12 @@ Generate your keys (`-C "comment"` optional):
 `ssh-keygen -t ed25519 -C "my ssh keys for github"  
   
 Follow onscreen instructions, providing a passphrase and location to store the public/private key pair.  
-  
+<!--more-->    
 Ensure the SSH agent is started:    
 `eval "$(ssh-agent -s)`  
 Should return the pid of the agent e.g.:  
 `>Agent pid 12345`  
-  
+ 
 Add your keys (replace `id_ed25519` with file name of your ssh keys):  
 `ssh-add ~/.ssh/id_ed25519`  
   

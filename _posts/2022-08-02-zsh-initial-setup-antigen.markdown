@@ -12,7 +12,7 @@ First things first is to install some dependencies:
 `sudo apt install zsh git curl autojump fonts-powerline wget`  
 
 (If your not on Ubuntu or Debian, you can follow instructions [here][powerline] for powerline fonts.)  
-
+<!--more-->  
 Next up is to get antigen:  
 
 `curl -L git.io/antigen > antigen.zsh`  
@@ -23,8 +23,15 @@ Then we need to create our zshrc file and add a couple of lines to enable antige
 
 And add the following lines:  
 
-`source /home/vm1/antigen.zsh   
-antigen init ~/.antigenrc`  
+{% highlight conf %}
+source /home/vm1/antigen.zsh     
+antigen init ~/.antigenrc  
+  
+# add aliases from my alias file  
+if [ -f ~/.zsh_aliases ]; then  
+    . ~/.zsh_aliases  
+fi  
+{% endhighlight %}
 
 Now we need to create our antigenrc file and configure our plugins:  
 
