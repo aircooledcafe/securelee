@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The fingerprint reader conundrum.
-date: 2022-08-12 18:00
+date: 2022-08-12 08:00      
 tags: xps 13 fingerprint reader goodix ubuntu lts 22.04
 ---
 
