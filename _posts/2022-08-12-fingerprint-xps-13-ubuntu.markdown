@@ -25,3 +25,4 @@ Use `space` to toggle and enable 'Fingerprint authentication' and your good to g
 
 
 [bugthread]: https://bugs.launchpad.net/ubuntu/+source/libfprint/+bug/1966911
+[staging]: https://launchpad.net/~andch/+archive/ubuntu/staging-fprint?field.series_filter=jammy
