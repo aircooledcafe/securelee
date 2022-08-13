@@ -15,7 +15,7 @@ img {
 </style> -->
 I'm known as [IIIIkoolaidIIII][profile] on PlayStation network, my trohy card bellow:  
   
-  
-<img src="https://card.psnprofiles.com/1/IIIIkoolaidIIII.png" border="0">
+
+<a href="https://psnprofiles.com/IIIIkoolaidIIII"><img src="https://card.psnprofiles.com/2/IIIIkoolaidIIII.png" border="0"></a>
 
 [profile]: https://psnprofiles.com/IIIIkoolaidIIII
