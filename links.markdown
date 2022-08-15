@@ -18,7 +18,10 @@ An article about VMWare and Hyper-V coexisting and some solutions and fixes for 
 A really good guide to git and it's fundamental commands. Really handy as I use several regularly but most I forget every time I come back to them.
 
 
+   
+### [Markdown Syntax Basics][markdown]
 
+As I am new to using markdown a handy reference guide for formatting and syntax was needed. I ahve found this one well laid out and sufficiently detailed for my needs.
 
 
 
@@ -45,3 +48,4 @@ A really good guide to git and it's fundamental commands. Really handy as I use 
 
 [vmware]: https://www.nakivo.com/blog/virtualization-applications-with-hyper-v-device-guard-and-credential-guard/
 [git]: https://www.garyrobinson.net/2014/10/git-in-two-minutes-for-a-solo-developer.html
+[markdown]: https://www.markdownguide.org/basic-syntax/

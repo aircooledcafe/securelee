@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am starting my journey back to work after long term illness and towards a career in cyber security. I am currently studying Computer Science with the Open University and studying on the UK governments Upskill in Cyber program to start a career within the industry. I started this blog to document little tips and tricks I learn through my journey and projects I have built over the years. Here are my dogs.
+I am starting my journey back to work after long term illness and towards a career in cyber security. I am currently studying Computer Science with the Open University and I am on the UK governments Upskill in Cyber program to help start my career within the industry. I started this blog to document little tips and tricks I learn through my journey and projects I have built over the years. Here are my dogs.
   
   
   
