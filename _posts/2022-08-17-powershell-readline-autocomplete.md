@@ -21,17 +21,20 @@ Install-Module PSReadLine
 Then we need to add some lines to your profile file (.ps1 file) should be in your `~/Documents/PowerShell` folder by default:  
   
 {% highlight powershell %}
-\# import the module to enable it
+# import the module to enable it
 Import-Module PSReadline  
 
-\# Shows navigable menu of all options when hitting Tab
+# Shows navigable menu of all options when hitting Tab
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-\# enable up/down arrows for navigating through the history
+
+# enable up/down arrows for navigating through the history
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-\# moves the cursor to the end of the autocompleted command (remove if you want the cursor to remain where the completion started from)
+
+# moves the cursor to the end of the autocompleted command (remove if you want the cursor to remain where the completion started from)
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
-\# enable zsh autocompletion like auto completion
+
+# enable zsh autocompletion like auto completion
 Set-PSReadlineOption -PredictionSource History
 {% endhighlight %}
   
