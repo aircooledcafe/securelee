@@ -9,9 +9,9 @@ I am starting my journey back to work after long term illness and towards a care
   
   
 Amy, my border collie crossed whippet.
-![Amy the dog](assets/amy.jpg)  
+![Amy, a border collie crossed whippet dog, black with white legs and stripe down her muzzle. Lying down facing you, with her mouth agape and tongue slightly light in happy anticipation for some play time.](assets/amy.jpg)  
   
   
   
 Penny, my jack russell terrier crossed whippet.
-![Penny the dog](assets/penny.jpg)
+![Penny, a jack russell crossed whippet dog, white with brown splotches. Sitting down, slightly askew, looking at you, expectantly, with left ear sticking out and the right ear cocked back distracted by what's behind her!](assets/penny.jpg)
