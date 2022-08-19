@@ -1,10 +1,10 @@
 ---
 title: Setting up Wireguard for a personal Virtual Private Network.
-style: post
+layout: post
 date: 2022-08-19 08:00
 ---
 ![The terminal on my mobile phone shown an ssh session to my home network over mobile using wireguard.](/assets/202208/pixelscreen.png)
-I just wanted access to my PiHole on my mobile when out of the house so I could get the tracking benefits when out of the house. I was suprised to find Wireguard was relatively simple to set up configure and deploy for my small use case of a desktop, Raspberry Pi, Mobile, iPad, and laptop.
+I just wanted access to my PiHole on my mobile when out of the house so I could get the tracking benefits when out of the house. I was surprised to find Wireguard was relatively simple to set up configure and deploy for my small use case of a desktop, Raspberry Pi, Mobile, iPad, and laptop.
 I did run into a small issue with a typo in my config file, which took me an hour to spot, even after I'd spotted it in the script I created to automate adding peers.
 <!--more-->
 First thing is some basic set up and admin, install wireguard (and the ufw firewall as I am using a Raspberry Pi) and a QR code generation tool I'll use later for adding mobile devices:
@@ -71,7 +71,7 @@ The following commands will now enable and disable Wireguard, I found it is requ
 `sudo wg up wg0`
 `sudo wg down wg0`
 
-Next is to set up your peers, to do this I created as script as it is tye smae commands each time, so automating it seemed like the approach least likely to fail. It also generates QR code to easily add mobile devices. You can find my script on Github [here][script].
+Next is to set up your peers, to do this I created as script as it's a lot of easy to mess up commands and editing config files, so automating it seemed like the approach least likely to fail. It also generates QR code to easily add mobile devices. You can find my script on Github [here][script].
 
 I'm using the official app on my Android mobile, it's basic but dose what is needed download [here][android].
 For iOS I am also using the official app which you can download [here][ios].
