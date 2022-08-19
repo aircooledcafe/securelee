@@ -3,7 +3,7 @@ title: Setting up Wireguard for a personal Virtual Private Network.
 style: post
 date: 2022-08-19 08:00
 ---
-![The terminal on my mobile phone shown an ssh session to my home network over mobile using wireguard.](/assets/202208/pixelscreen-crop.png){: max-width="500"}
+![The terminal on my mobile phone shown an ssh session to my home network over mobile using wireguard.](/assets/202208/pixelscreen.png){: max-width="500"}
 I just wanted access to my PiHole on my mobile when out of the house so I could get the tracking benefits when out of the house. I was suprised to find Wireguard was relatively simple to set up configure and deploy for my small use case of a desktop, Raspberry Pi, Mobile, iPad, and laptop.
 I did run into a small issue with a typo in my config file, which took me an hour to spot, even after I'd spotted it in the script I created to automate adding peers.
 <!--more-->
