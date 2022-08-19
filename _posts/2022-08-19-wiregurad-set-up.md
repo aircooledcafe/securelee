@@ -46,7 +46,7 @@ Add the following, the IP address can be whatever you want it to be, I've used t
 [Interface]
 Address = 10.10.0.1/24, fd08:4711::1/64
 ListenPort = 47777
-# this is to enable NAT on the server for Raspberry Pi (this is verbatim from [Pi-Hole][pihole] pages):
+\# this is to enable NAT on the server for Raspberry Pi (this is verbatim from [Pi-Hole][pihole] pages):
 PostUp = nft add table ip wireguard; nft add chain ip wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade; nft add table ip6 wireguard; nft add chain ip6 wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip6 wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade
 PostDown = nft delete table ip wireguard; nft delete table ip6 wireguard
 {% endhighlight %}
