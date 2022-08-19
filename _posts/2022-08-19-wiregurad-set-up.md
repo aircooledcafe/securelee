@@ -7,7 +7,7 @@ date: 2022-08-19 08:00
 I just wanted access to my PiHole on my mobile when out of the house so I could get the tracking benefits when out of the house. I was surprised to find Wireguard was relatively simple to set up configure and deploy for my small use case of a desktop, Raspberry Pi, Mobile, iPad, and laptop.
 I did run into a small issue with a typo in my config file, which took me an hour to spot, even after I'd spotted it in the script I created to automate adding peers.
 <!--more-->
-First thing is some basic set up and admin, install wireguard (and the ufw firewall as I am using a Raspberry Pi) and a QR code generation tool I'll use later for adding mobile devices:
+First thing is some basic set up and admin, install wireguard (and the ufw firewall as I am using a Raspberry Pi) and a QR code generation tool I'll use later for adding mobile devices:  
 `sudo apt install wireguard wireguard-tools ufw qrencode -y`
 
 First hing is to configure the firewall, so the necessary ports ready to go and the Pi is protected:  
@@ -66,7 +66,7 @@ interface: wg0
   public key: YOUR_PUBLIC_KEY
   private key: (hidden)
   listening port: 47777
-{% end highlight %}
+{% endhighlight %}
 
 The following commands will now enable and disable Wireguard, I found it is required to bring the interface down and up after adding a client:  
 `sudo wg up wg0`  
@@ -87,7 +87,7 @@ peer: PEER_PUBLIC_KEY
   allowed ips: CLIENT_IP, CLIENT_IPv6
   latest handshake: 3 minutes, 46 seconds ago
   transfer: 46.53 KiB received, 69.89 KiB sent
-{% end highlight %}
+{% endhighlight %}
 
 This was a great learning experience, these instructions were pulled from various sources including Pi-Hole [documentation][pihole], reddit and stack overflow. I knew almost nothing about Wireguard before this, but now understand how it works and the general bugs that crop up. I still need to understand the NAT forwarding which I just copy pasted from pi-hole without understanding IP-Tables. That's a task for another day.
 
