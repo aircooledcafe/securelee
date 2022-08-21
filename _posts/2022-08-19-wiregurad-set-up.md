@@ -45,7 +45,7 @@ Add the following, the IP address can be whatever you want it to be, I've used t
 
 {% highlight conf %}
 [Interface]
-Address = 10.10.0.1/24, fd08:4711::1/64
+Address = 10.10.0.1/24
 ListenPort = 47777
 \# this is to enable NAT on the server for Raspberry Pi:
 PostUp = nft add table ip wireguard; nft add chain ip wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade; nft add table ip6 wireguard; nft add chain ip6 wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip6 wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade
@@ -84,7 +84,7 @@ To test your connections is working `sudo wg show`will show all connected peers,
 peer: PEER_PUBLIC_KEY
   preshared key: (hidden)
   endpoint: PUBLIC_IP:RANDOM_PORT
-  allowed ips: CLIENT_IP, CLIENT_IPv6
+  allowed ips: CLIENT_IP
   latest handshake: 3 minutes, 46 seconds ago
   transfer: 46.53 KiB received, 69.89 KiB sent
 {% endhighlight %}
