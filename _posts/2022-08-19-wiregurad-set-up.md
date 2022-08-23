@@ -30,7 +30,7 @@ Next to enable IPv4 forwarding so we can access the local network via wireguard,
 `net.ipv6.conf.all.forwarding = 1`  
 Check it's working by running `sudo sysctl -p`, it should return the above lines that were uncommented.  
    
-I changed the interface setting son the Pi-Hole to be bound to eth0, so it will listen for DNS from devices connected through WWireguard outside of the home network, it's on the [DNS settings][piholedns] page.  
+I changed the interface setting son the Pi-Hole to be bound to eth0, so it will listen for DNS from devices connected through Wireguard outside of the home network, it's on the [DNS settings][piholedns] page.  
 Now to move onto the fun part and setup Wireguard.
 
 As the wireguard directory is root privilege only, we'll jump into a root shell and set up the server:  
@@ -97,3 +97,5 @@ This was a great learning experience, these instructions were pulled from variou
 [android]: https://play.google.com/store/apps/details?id=com.wireguard.android
 [ios]: https://apps.apple.com/us/app/wireguard/id1441195209
 [piholedns]: http://pi.hole/admin/settings.php?tab=dns
+
+*Edit: I had previously used the iptable rules from the Pi-Hole website for routing to an internal newtok, but they were not working for me. I have since updated the post with the details that are working for me using UWF firewall. If you use iptables or nftables Pi-Holes config can be found [here][pihole]*
