@@ -17,6 +17,10 @@ First hing is to configure the firewall, so the necessary ports ready to go and 
 `sudo ufw allow 4711/tcp # pihole`   
 `sudo ufw allow 47777/ # wireguard port`  
 
+I discovered after much troubleshooting that I was using the wrong firewall rules within my configuration file as I was not using IPtables that the rules were deigned to forward traffic between the wireguard network and my specified network. I discover tat I needed to add  a `UFW route` rule, which allows the server to now pass traffic to my non Wireguard devices on the home network:
+
+`sudo ufw route allow in on wg0 to 192.168.0.0/24`
+
 Then I enabled the firewall with:  
 `sudo ufw enable`  
 It should return `Firewall is active and enabled on system startup`.
@@ -46,10 +50,7 @@ Add the following, the IP address can be whatever you want it to be, I've used t
 {% highlight conf %}
 [Interface]
 Address = 10.10.0.1/24
-ListenPort = 47777
-\# this is to enable NAT on the server for Raspberry Pi:
-PostUp = nft add table ip wireguard; nft add chain ip wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade; nft add table ip6 wireguard; nft add chain ip6 wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip6 wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade
-PostDown = nft delete table ip wireguard; nft delete table ip6 wireguard
+ListenPort = 47777 \#(note: this can be port number)
 {% endhighlight %}
 
 Then append the previously generated private key to the config file:  
@@ -89,7 +90,7 @@ peer: PEER_PUBLIC_KEY
   transfer: 46.53 KiB received, 69.89 KiB sent
 {% endhighlight %}
 
-This was a great learning experience, these instructions were pulled from various sources including Pi-Hole [documentation][pihole], reddit and stack overflow. I knew almost nothing about Wireguard before this, but now understand how it works and the general bugs that crop up. I still need to understand the NAT forwarding which I just copy pasted from pi-hole without understanding IP-Tables. That's a task for another day.
+This was a great learning experience, these instructions were pulled from various sources including Pi-Hole [documentation][pihole], reddit and stack overflow. I knew almost nothing about Wireguard before this, but now understand how it works and the general bugs that crop up.
 
 [script]: https://github.com/aircooledcafe/wireguard-peer-script/
 [pihole]: https://docs.pi-hole.net/guides/vpn/wireguard/internal/
