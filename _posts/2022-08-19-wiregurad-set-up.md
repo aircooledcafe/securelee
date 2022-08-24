@@ -17,7 +17,7 @@ First hing is to configure the firewall, so the necessary ports ready to go and 
 `sudo ufw allow 4711/tcp # pihole`   
 `sudo ufw allow 47777/ # wireguard port`  
 
-I discovered after much troubleshooting that I was using the wrong firewall rules within my configuration file as I was not using IPtables that the rules were deigned to forward traffic between the wireguard network and my specified network. I discover tat I needed to add  a `UFW route` rule, which allows the server to now pass traffic to my non Wireguard devices on the home network:
+I discovered after much troubleshooting that I was using the wrong firewall rules within my configuration file as I was not using IPtables that the rules were deigned to forward traffic between the wireguard network and my specified network. I discover tat I needed to add a `UFW route` rule, which allows the server to now pass traffic to my non Wireguard devices on the home network:
 
 `sudo ufw route allow in on wg0 to 192.168.0.0/24`
 
@@ -51,6 +51,9 @@ Add the following, the IP address can be whatever you want it to be, I've used t
 [Interface]
 Address = 10.10.0.1/24
 ListenPort = 47777 \#(note: this can be port number)
+\# this is to allow routing to the an internal network from the server (verbatim from [PiHole documentation][pihole])
+PostUp = nft add table ip wireguard; nft add chain ip wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade; nft add table ip6 wireguard; nft add chain ip6 wireguard wireguard_chain {type nat hook postrouting priority srcnat\; policy accept\;}; nft add rule ip6 wireguard wireguard_chain oifname "eth0" counter packets 0 bytes 0 masquerade
+PostDown = nft delete table ip wireguard; nft delete table ip6 wireguard
 {% endhighlight %}
 
 Then append the previously generated private key to the config file:  
@@ -97,5 +100,3 @@ This was a great learning experience, these instructions were pulled from variou
 [android]: https://play.google.com/store/apps/details?id=com.wireguard.android
 [ios]: https://apps.apple.com/us/app/wireguard/id1441195209
 [piholedns]: http://pi.hole/admin/settings.php?tab=dns
-
-*Edit: I had previously used the iptable rules from the Pi-Hole website for routing to an internal newtok, but they were not working for me. I have since updated the post with the details that are working for me using UWF firewall. If you use iptables or nftables Pi-Holes config can be found [here][pihole]*
