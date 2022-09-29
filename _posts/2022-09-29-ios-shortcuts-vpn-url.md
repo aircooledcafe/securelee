@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iOS Custom URL for VPN and DNS Shortcuts
-date: 2022-07-28 08:00
+date: 2022-09-29 08:00
 tags: ios, shortcuts, url, vpn, dns
 ---
 
