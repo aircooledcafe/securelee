@@ -23,12 +23,12 @@ As I am new to using markdown a handy reference guide for formatting and syntax 
 
 ***
 
-### [2FA Directory][directory]
+#### [2FA Directory][directory]
 A pretty comprehensive directory of services and which forms of two factor authorisation they support, if they support 2FA at all.
 
 ***
 
-### [Cipher Identifier][cipher-id]
+#### [Cipher Identifier][cipher-id]
 I partisapated in a Caputure the Flag even recently, my first. While trying to solve one of the decryption challenges I found this really cool site that can attempt to identify how a cipher text was encrypted.
 
 ***
