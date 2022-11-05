@@ -4,5 +4,7 @@
 
 layout: home
 ---
+<a rel="me" href="https://infosec.exchange/@aircooledcafe">Mastodon</a>
+
 
 ![Amy, a black and white border collie, wearing a purple collar, sitting side on (visible from the shoulders up). Obscured by three horizontal pieces of wood (the back of a bench) as if hiding but not successfully!](assets/hiding_mid.jpg)
