@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tailscale App Intent Settings For Automation
-date: 2023-05-06 09:00
-tags: android tailscale automation vpn 
+date: 2023-05-06 07:00
+tags: android, tailscale, automation, vpn, 
 ---
 
 Settings for Android App intents for conecting and disconnecting Tailscale VPN, for use in automation like Tasker.
