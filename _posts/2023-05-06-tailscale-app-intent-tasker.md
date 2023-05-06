@@ -23,5 +23,5 @@ Tailscale Down:
   Class: com.tailscale.ipn.IPNReceiver  
   Target: Broadcast Receiver  
 
-These chould be set up as tasks within Tasker, which can the nbe called in the Profiles you create.  
+These should be set up as tasks within Tasker, which can then be called in the Profiles you create.  
 I created a connected and disconnected profile for my home network which called the appropriate intent.
