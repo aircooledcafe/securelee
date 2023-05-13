@@ -60,13 +60,19 @@ Disable wireguard connection:
 ### Some useful links
 
 Wireguard GUI for debian based linux distributions, adds system tray icon and simple toggle:  
-[https://github.com/UnnoTed/wireguird]{https://github.com/UnnoTed/wireguird}
+[https://github.com/UnnoTed/wireguird][gui]
 
 OPNSense Wireguard Road Warrior setup, I used most steps to set up on my router:  
-[https://docs.opnsense.org/manual/how-tos/wireguard-client.html][https://docs.opnsense.org/manual/how-tos/wireguard-client.html]
+[https://docs.opnsense.org/manual/how-tos/wireguard-client.html][opn]
 
 Wireguard homepage:  
-https://wireguard.com
+[https://wireguard.com][wg]
 
 Digital Oceans Wireguard setup guide is very useful and more featured than Wireguards' own one:  
-https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04
+[https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04][do]
+
+[gui]: https://github.com/UnnoTed/wireguird
+[opn]: https://docs.opnsense.org/manual/how-tos/wireguard-client.html
+[wg]: https://wireguard.com
+[do]: https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04
+
