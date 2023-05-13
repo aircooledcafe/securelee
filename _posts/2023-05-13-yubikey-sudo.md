@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Wireguard Peer Config and Setup
+title: How to setup your Yubikey for Sudo Authorisations
 date: 2023-05-13 08:00
 tags: linux, yubikey, yubico, security, sudo, u2f, pam.d, terminal
 ---
-
-## How to setup your Yubikey for Sudo Authorisations
 
 The basics of adding a Yubikey to be used to authorise `sudo` commands on a Debian Linux machine.
 
