@@ -60,10 +60,10 @@ Disable wireguard connection:
 ### Some useful links
 
 Wireguard GUI for debian based linux distributions, adds system tray icon and simple toggle:  
-[https://github.com/UnnoTed/wireguird]
+[https://github.com/UnnoTed/wireguird]{https://github.com/UnnoTed/wireguird}
 
 OPNSense Wireguard Road Warrior setup, I used most steps to set up on my router:  
-https://docs.opnsense.org/manual/how-tos/wireguard-client.html
+[https://docs.opnsense.org/manual/how-tos/wireguard-client.html][https://docs.opnsense.org/manual/how-tos/wireguard-client.html]
 
 Wireguard homepage:  
 https://wireguard.com
