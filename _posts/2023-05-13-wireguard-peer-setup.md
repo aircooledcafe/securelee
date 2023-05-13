@@ -7,7 +7,7 @@ tags: android, wireguard, ios, iphone, security, privacy, vpn
 
 ## Wireguard Peer Config and Setup
 
-This is some basic instructions for setting up Peers for Wireguard when routing traffic through a central interface. In my circumstances it is mostly for accessing my home network and using my DNS servers when on mobile. I am working on a setup with Wireguard installed on my OPNSense router (setup out of scope).
+This is some basic instructions for setting up Peers for Wireguard when routing traffic through a central interface. In my circumstances it is mostly for accessing my home network and using my DNS servers when on mobile. I am working on a setup with Wireguard installed on my OPNSense router (I followed acombination of the OPNSense Road Warrior and Digital Ocean guides linked below).
 
 Install wireguard:  
 `sudo apt install`
