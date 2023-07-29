@@ -34,5 +34,8 @@ Now you can log in to the remote device using your SSH keys with:
   
 `ssh IP_ADDRESS`
 
+Command to remove a host from your "known_hosts" file:
+`ssh-keygen -f "/home/ben/.ssh/known_hosts" -R "10.10.10.10"`
+
 
 
