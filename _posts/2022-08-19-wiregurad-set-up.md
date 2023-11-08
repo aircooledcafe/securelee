@@ -73,8 +73,8 @@ interface: wg0
 {% endhighlight %}
 
 The following commands will now enable and disable Wireguard, I found it is required to bring the interface down and up after adding a client:  
-`sudo wg up wg0`  
-`sudo wg down wg0`  
+`sudo wg-quick up wg0`  
+`sudo wg-quick down wg0`  
 
 Next is to set up your peers, to do this I created as script as it's a lot of easy to mess up commands and editing config files, so automating it seemed like the approach least likely to fail. It also generates QR code to easily add mobile devices. You can find my script on Github [here][script].
 
