@@ -17,8 +17,8 @@ Ensure the SSH agent is started:
 Should return the pid of the agent e.g.:  
 `>Agent pid 12345`  
  
-Add your keys (replace `id_ed25519` with file name of your ssh keys):  
-`ssh-add ~/.ssh/id_ed25519`  
+Add your keys (replace `id_rsa` with file name of your ssh keys):  
+`ssh-add ~/.ssh/is_rsa`  
   
 Now add the public key to github. Go to:  
   
