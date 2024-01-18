@@ -8,7 +8,7 @@ tags: github ssh keys security ed25519 linux
 I always forget to transfer my keys and never remeber the command s to generte new ones, So here are my basic instructions for generating SSH keys and setting them up with Github and a server.
 <!--more-->  
 Generate your keys (`-C "comment"` optional):  
-`ssh-keygen -t ed25519 -C "my ssh keys for github"`  
+`ssh-keygen -f ~/.ssh/id_rsa -b 4096 -C "my ssh keys for github"`  
   
 Follow onscreen instructions, providing a passphrase and location to store the public/private key pair.  
     
